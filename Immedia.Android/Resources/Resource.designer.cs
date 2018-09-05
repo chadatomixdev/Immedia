@@ -886,44 +886,44 @@ namespace Immedia.Android
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f0a003e
-			public const int abc_background_cache_hint_selector_material_dark = 2131361854;
-			
-			// aapt resource value: 0x7f0a003f
-			public const int abc_background_cache_hint_selector_material_light = 2131361855;
-			
-			// aapt resource value: 0x7f0a0040
-			public const int abc_btn_colored_borderless_text_material = 2131361856;
-			
-			// aapt resource value: 0x7f0a0041
-			public const int abc_btn_colored_text_material = 2131361857;
-			
 			// aapt resource value: 0x7f0a0042
-			public const int abc_color_highlight_material = 2131361858;
+			public const int abc_background_cache_hint_selector_material_dark = 2131361858;
 			
 			// aapt resource value: 0x7f0a0043
-			public const int abc_hint_foreground_material_dark = 2131361859;
+			public const int abc_background_cache_hint_selector_material_light = 2131361859;
 			
 			// aapt resource value: 0x7f0a0044
-			public const int abc_hint_foreground_material_light = 2131361860;
+			public const int abc_btn_colored_borderless_text_material = 2131361860;
+			
+			// aapt resource value: 0x7f0a0045
+			public const int abc_btn_colored_text_material = 2131361861;
+			
+			// aapt resource value: 0x7f0a0046
+			public const int abc_color_highlight_material = 2131361862;
+			
+			// aapt resource value: 0x7f0a0047
+			public const int abc_hint_foreground_material_dark = 2131361863;
+			
+			// aapt resource value: 0x7f0a0048
+			public const int abc_hint_foreground_material_light = 2131361864;
 			
 			// aapt resource value: 0x7f0a0000
 			public const int abc_input_method_navigation_guard = 2131361792;
 			
-			// aapt resource value: 0x7f0a0045
-			public const int abc_primary_text_disable_only_material_dark = 2131361861;
-			
-			// aapt resource value: 0x7f0a0046
-			public const int abc_primary_text_disable_only_material_light = 2131361862;
-			
-			// aapt resource value: 0x7f0a0047
-			public const int abc_primary_text_material_dark = 2131361863;
-			
-			// aapt resource value: 0x7f0a0048
-			public const int abc_primary_text_material_light = 2131361864;
-			
 			// aapt resource value: 0x7f0a0049
-			public const int abc_search_url_text = 2131361865;
+			public const int abc_primary_text_disable_only_material_dark = 2131361865;
+			
+			// aapt resource value: 0x7f0a004a
+			public const int abc_primary_text_disable_only_material_light = 2131361866;
+			
+			// aapt resource value: 0x7f0a004b
+			public const int abc_primary_text_material_dark = 2131361867;
+			
+			// aapt resource value: 0x7f0a004c
+			public const int abc_primary_text_material_light = 2131361868;
+			
+			// aapt resource value: 0x7f0a004d
+			public const int abc_search_url_text = 2131361869;
 			
 			// aapt resource value: 0x7f0a0001
 			public const int abc_search_url_text_normal = 2131361793;
@@ -934,29 +934,29 @@ namespace Immedia.Android
 			// aapt resource value: 0x7f0a0003
 			public const int abc_search_url_text_selected = 2131361795;
 			
-			// aapt resource value: 0x7f0a004a
-			public const int abc_secondary_text_material_dark = 2131361866;
-			
-			// aapt resource value: 0x7f0a004b
-			public const int abc_secondary_text_material_light = 2131361867;
-			
-			// aapt resource value: 0x7f0a004c
-			public const int abc_tint_btn_checkable = 2131361868;
-			
-			// aapt resource value: 0x7f0a004d
-			public const int abc_tint_default = 2131361869;
-			
 			// aapt resource value: 0x7f0a004e
-			public const int abc_tint_edittext = 2131361870;
+			public const int abc_secondary_text_material_dark = 2131361870;
 			
 			// aapt resource value: 0x7f0a004f
-			public const int abc_tint_seek_thumb = 2131361871;
+			public const int abc_secondary_text_material_light = 2131361871;
 			
 			// aapt resource value: 0x7f0a0050
-			public const int abc_tint_spinner = 2131361872;
+			public const int abc_tint_btn_checkable = 2131361872;
 			
 			// aapt resource value: 0x7f0a0051
-			public const int abc_tint_switch_track = 2131361873;
+			public const int abc_tint_default = 2131361873;
+			
+			// aapt resource value: 0x7f0a0052
+			public const int abc_tint_edittext = 2131361874;
+			
+			// aapt resource value: 0x7f0a0053
+			public const int abc_tint_seek_thumb = 2131361875;
+			
+			// aapt resource value: 0x7f0a0054
+			public const int abc_tint_spinner = 2131361876;
+			
+			// aapt resource value: 0x7f0a0055
+			public const int abc_tint_switch_track = 2131361877;
 			
 			// aapt resource value: 0x7f0a0004
 			public const int accent_material_dark = 2131361796;
@@ -1014,6 +1014,15 @@ namespace Immedia.Android
 			
 			// aapt resource value: 0x7f0a0016
 			public const int error_color_material = 2131361814;
+			
+			// aapt resource value: 0x7f0a0040
+			public const int flickrColorBackgroundAccent = 2131361856;
+			
+			// aapt resource value: 0x7f0a003e
+			public const int flickrPrimaryBackgroundColor = 2131361854;
+			
+			// aapt resource value: 0x7f0a003f
+			public const int flickrSecondaryBackgroundColor = 2131361855;
 			
 			// aapt resource value: 0x7f0a0017
 			public const int foreground_material_dark = 2131361815;
@@ -1114,17 +1123,20 @@ namespace Immedia.Android
 			// aapt resource value: 0x7f0a0034
 			public const int secondary_text_disabled_material_light = 2131361844;
 			
+			// aapt resource value: 0x7f0a0041
+			public const int splash_background = 2131361857;
+			
 			// aapt resource value: 0x7f0a0035
 			public const int switch_thumb_disabled_material_dark = 2131361845;
 			
 			// aapt resource value: 0x7f0a0036
 			public const int switch_thumb_disabled_material_light = 2131361846;
 			
-			// aapt resource value: 0x7f0a0052
-			public const int switch_thumb_material_dark = 2131361874;
+			// aapt resource value: 0x7f0a0056
+			public const int switch_thumb_material_dark = 2131361878;
 			
-			// aapt resource value: 0x7f0a0053
-			public const int switch_thumb_material_light = 2131361875;
+			// aapt resource value: 0x7f0a0057
+			public const int switch_thumb_material_light = 2131361879;
 			
 			// aapt resource value: 0x7f0a0037
 			public const int switch_thumb_normal_material_dark = 2131361847;
@@ -1770,11 +1782,11 @@ namespace Immedia.Android
 			// aapt resource value: 0x7f02005a
 			public const int notification_icon_background = 2130837594;
 			
-			// aapt resource value: 0x7f02005f
-			public const int notification_template_icon_bg = 2130837599;
+			// aapt resource value: 0x7f020061
+			public const int notification_template_icon_bg = 2130837601;
 			
-			// aapt resource value: 0x7f020060
-			public const int notification_template_icon_low_bg = 2130837600;
+			// aapt resource value: 0x7f020062
+			public const int notification_template_icon_low_bg = 2130837602;
 			
 			// aapt resource value: 0x7f02005b
 			public const int notification_tile_bg = 2130837595;
@@ -1783,10 +1795,16 @@ namespace Immedia.Android
 			public const int notify_panel_notification_icon_bg = 2130837596;
 			
 			// aapt resource value: 0x7f02005d
-			public const int tooltip_frame_dark = 2130837597;
+			public const int splash_logo = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
-			public const int tooltip_frame_light = 2130837598;
+			public const int splash_screen = 2130837598;
+			
+			// aapt resource value: 0x7f02005f
+			public const int tooltip_frame_dark = 2130837599;
+			
+			// aapt resource value: 0x7f020060
+			public const int tooltip_frame_light = 2130837600;
 			
 			static Drawable()
 			{
@@ -1804,6 +1822,9 @@ namespace Immedia.Android
 			// aapt resource value: 0x7f0b0024
 			public const int ALT = 2131427364;
 			
+			// aapt resource value: 0x7f0b007c
+			public const int ActionAbout = 2131427452;
+			
 			// aapt resource value: 0x7f0b0025
 			public const int CTRL = 2131427365;
 			
@@ -1819,8 +1840,8 @@ namespace Immedia.Android
 			// aapt resource value: 0x7f0b0029
 			public const int SYM = 2131427369;
 			
-			// aapt resource value: 0x7f0b0069
-			public const int action0 = 2131427433;
+			// aapt resource value: 0x7f0b006b
+			public const int action0 = 2131427435;
 			
 			// aapt resource value: 0x7f0b0057
 			public const int action_bar = 2131427415;
@@ -1843,17 +1864,17 @@ namespace Immedia.Android
 			// aapt resource value: 0x7f0b0035
 			public const int action_bar_title = 2131427381;
 			
-			// aapt resource value: 0x7f0b0066
-			public const int action_container = 2131427430;
+			// aapt resource value: 0x7f0b0068
+			public const int action_container = 2131427432;
 			
 			// aapt resource value: 0x7f0b0058
 			public const int action_context_bar = 2131427416;
 			
-			// aapt resource value: 0x7f0b006d
-			public const int action_divider = 2131427437;
+			// aapt resource value: 0x7f0b006f
+			public const int action_divider = 2131427439;
 			
-			// aapt resource value: 0x7f0b0067
-			public const int action_image = 2131427431;
+			// aapt resource value: 0x7f0b0069
+			public const int action_image = 2131427433;
 			
 			// aapt resource value: 0x7f0b0002
 			public const int action_menu_divider = 2131427330;
@@ -1870,11 +1891,11 @@ namespace Immedia.Android
 			// aapt resource value: 0x7f0b0037
 			public const int action_mode_close_button = 2131427383;
 			
-			// aapt resource value: 0x7f0b0068
-			public const int action_text = 2131427432;
+			// aapt resource value: 0x7f0b006a
+			public const int action_text = 2131427434;
 			
-			// aapt resource value: 0x7f0b0076
-			public const int actions = 2131427446;
+			// aapt resource value: 0x7f0b0078
+			public const int actions = 2131427448;
 			
 			// aapt resource value: 0x7f0b0038
 			public const int activity_chooser_view_content = 2131427384;
@@ -1903,14 +1924,14 @@ namespace Immedia.Android
 			// aapt resource value: 0x7f0b003e
 			public const int buttonPanel = 2131427390;
 			
-			// aapt resource value: 0x7f0b006a
-			public const int cancel_action = 2131427434;
+			// aapt resource value: 0x7f0b006c
+			public const int cancel_action = 2131427436;
 			
 			// aapt resource value: 0x7f0b004e
 			public const int checkbox = 2131427406;
 			
-			// aapt resource value: 0x7f0b0072
-			public const int chronometer = 2131427442;
+			// aapt resource value: 0x7f0b0074
+			public const int chronometer = 2131427444;
 			
 			// aapt resource value: 0x7f0b002b
 			public const int collapseActionView = 2131427371;
@@ -1939,8 +1960,8 @@ namespace Immedia.Android
 			// aapt resource value: 0x7f0b0022
 			public const int end = 2131427362;
 			
-			// aapt resource value: 0x7f0b0078
-			public const int end_padder = 2131427448;
+			// aapt resource value: 0x7f0b007a
+			public const int end_padder = 2131427450;
 			
 			// aapt resource value: 0x7f0b0039
 			public const int expand_activities_button = 2131427385;
@@ -1960,8 +1981,8 @@ namespace Immedia.Android
 			// aapt resource value: 0x7f0b003d
 			public const int icon = 2131427389;
 			
-			// aapt resource value: 0x7f0b0077
-			public const int icon_group = 2131427447;
+			// aapt resource value: 0x7f0b0079
+			public const int icon_group = 2131427449;
 			
 			// aapt resource value: 0x7f0b002c
 			public const int ifRoom = 2131427372;
@@ -1969,8 +1990,8 @@ namespace Immedia.Android
 			// aapt resource value: 0x7f0b003a
 			public const int image = 2131427386;
 			
-			// aapt resource value: 0x7f0b0073
-			public const int info = 2131427443;
+			// aapt resource value: 0x7f0b0075
+			public const int info = 2131427445;
 			
 			// aapt resource value: 0x7f0b0034
 			public const int italic = 2131427380;
@@ -1987,11 +2008,14 @@ namespace Immedia.Android
 			// aapt resource value: 0x7f0b003c
 			public const int list_item = 2131427388;
 			
-			// aapt resource value: 0x7f0b006c
-			public const int media_actions = 2131427436;
+			// aapt resource value: 0x7f0b0067
+			public const int main_content = 2131427431;
 			
-			// aapt resource value: 0x7f0b0079
-			public const int message = 2131427449;
+			// aapt resource value: 0x7f0b006e
+			public const int media_actions = 2131427438;
+			
+			// aapt resource value: 0x7f0b007b
+			public const int message = 2131427451;
 			
 			// aapt resource value: 0x7f0b0023
 			public const int middle = 2131427363;
@@ -2008,14 +2032,14 @@ namespace Immedia.Android
 			// aapt resource value: 0x7f0b0010
 			public const int normal = 2131427344;
 			
-			// aapt resource value: 0x7f0b0075
-			public const int notification_background = 2131427445;
+			// aapt resource value: 0x7f0b0077
+			public const int notification_background = 2131427447;
 			
-			// aapt resource value: 0x7f0b006f
-			public const int notification_main_column = 2131427439;
+			// aapt resource value: 0x7f0b0071
+			public const int notification_main_column = 2131427441;
 			
-			// aapt resource value: 0x7f0b006e
-			public const int notification_main_column_container = 2131427438;
+			// aapt resource value: 0x7f0b0070
+			public const int notification_main_column_container = 2131427440;
 			
 			// aapt resource value: 0x7f0b0040
 			public const int parentPanel = 2131427392;
@@ -2029,11 +2053,11 @@ namespace Immedia.Android
 			// aapt resource value: 0x7f0b0050
 			public const int radio = 2131427408;
 			
-			// aapt resource value: 0x7f0b0074
-			public const int right_icon = 2131427444;
+			// aapt resource value: 0x7f0b0076
+			public const int right_icon = 2131427446;
 			
-			// aapt resource value: 0x7f0b0070
-			public const int right_side = 2131427440;
+			// aapt resource value: 0x7f0b0072
+			public const int right_side = 2131427442;
 			
 			// aapt resource value: 0x7f0b001b
 			public const int screen = 2131427355;
@@ -2107,8 +2131,8 @@ namespace Immedia.Android
 			// aapt resource value: 0x7f0b001e
 			public const int src_over = 2131427358;
 			
-			// aapt resource value: 0x7f0b006b
-			public const int status_bar_latest_event_content = 2131427435;
+			// aapt resource value: 0x7f0b006d
+			public const int status_bar_latest_event_content = 2131427437;
 			
 			// aapt resource value: 0x7f0b0051
 			public const int submenuarrow = 2131427409;
@@ -2134,8 +2158,8 @@ namespace Immedia.Android
 			// aapt resource value: 0x7f0b0044
 			public const int textSpacerNoTitle = 2131427396;
 			
-			// aapt resource value: 0x7f0b0071
-			public const int time = 2131427441;
+			// aapt resource value: 0x7f0b0073
+			public const int time = 2131427443;
 			
 			// aapt resource value: 0x7f0b000e
 			public const int title = 2131427342;
@@ -2145,6 +2169,9 @@ namespace Immedia.Android
 			
 			// aapt resource value: 0x7f0b004a
 			public const int title_template = 2131427402;
+			
+			// aapt resource value: 0x7f0b0066
+			public const int toolbar = 2131427430;
 			
 			// aapt resource value: 0x7f0b0030
 			public const int top = 2131427376;
@@ -2347,7 +2374,10 @@ namespace Immedia.Android
 			public const int support_simple_spinner_dropdown_item = 2130968621;
 			
 			// aapt resource value: 0x7f04002e
-			public const int tooltip = 2130968622;
+			public const int Toolbar = 2130968622;
+			
+			// aapt resource value: 0x7f04002f
+			public const int tooltip = 2130968623;
 			
 			static Layout()
 			{
@@ -2355,6 +2385,22 @@ namespace Immedia.Android
 			}
 			
 			private Layout()
+			{
+			}
+		}
+		
+		public partial class Menu
+		{
+			
+			// aapt resource value: 0x7f0d0000
+			public const int Home = 2131558400;
+			
+			static Menu()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Menu()
 			{
 			}
 		}
@@ -2377,6 +2423,15 @@ namespace Immedia.Android
 		
 		public partial class String
 		{
+			
+			// aapt resource value: 0x7f060021
+			public const int AboutDialogClose = 2131099681;
+			
+			// aapt resource value: 0x7f060020
+			public const int ActionAboutTitle = 2131099680;
+			
+			// aapt resource value: 0x7f06001f
+			public const int ApplicationName = 2131099679;
 			
 			// aapt resource value: 0x7f060000
 			public const int abc_action_bar_home_description = 2131099648;
@@ -2465,9 +2520,6 @@ namespace Immedia.Android
 			// aapt resource value: 0x7f060010
 			public const int abc_toolbar_collapse_description = 2131099664;
 			
-			// aapt resource value: 0x7f06001f
-			public const int app_name = 2131099679;
-			
 			// aapt resource value: 0x7f060011
 			public const int search_menu_title = 2131099665;
 			
@@ -2487,6 +2539,12 @@ namespace Immedia.Android
 		public partial class Style
 		{
 			
+			// aapt resource value: 0x7f080166
+			public const int ActionBar_TitleText = 2131231078;
+			
+			// aapt resource value: 0x7f080165
+			public const int ActionBarThemeOverlay = 2131231077;
+			
 			// aapt resource value: 0x7f080095
 			public const int AlertDialog_AppCompat = 2131230869;
 			
@@ -2501,6 +2559,9 @@ namespace Immedia.Android
 			
 			// aapt resource value: 0x7f080099
 			public const int Animation_AppCompat_Tooltip = 2131230873;
+			
+			// aapt resource value: 0x7f080162
+			public const int AppTheme = 2131231074;
 			
 			// aapt resource value: 0x7f08009a
 			public const int Base_AlertDialog_AppCompat = 2131230874;
@@ -2976,6 +3037,9 @@ namespace Immedia.Android
 			// aapt resource value: 0x7f08007e
 			public const int Base_Widget_AppCompat_Toolbar_Button_Navigation = 2131230846;
 			
+			// aapt resource value: 0x7f080167
+			public const int MyTheme_Splash = 2131231079;
+			
 			// aapt resource value: 0x7f08001e
 			public const int Platform_AppCompat = 2131230750;
 			
@@ -3305,6 +3369,12 @@ namespace Immedia.Android
 			
 			// aapt resource value: 0x7f080106
 			public const int Theme_AppCompat_NoActionBar = 2131230982;
+			
+			// aapt resource value: 0x7f080163
+			public const int Theme_Base = 2131231075;
+			
+			// aapt resource value: 0x7f080164
+			public const int Theme_Flickr = 2131231076;
 			
 			// aapt resource value: 0x7f080107
 			public const int ThemeOverlay_AppCompat = 2131230983;

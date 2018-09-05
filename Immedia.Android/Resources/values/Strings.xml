@@ -1,4 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Immedia</string>
+    <string name="ApplicationName">Immedia</string>
+    <string name="ActionAboutTitle">About</string>
+    <string name="AboutDialogClose">Close</string>
 </resources>

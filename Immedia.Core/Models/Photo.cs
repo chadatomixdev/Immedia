@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Immedia.Core.Models
 {
@@ -25,9 +24,9 @@ namespace Immedia.Core.Models
         public int isfamily { get; set; }
     }
 
-    //public class RootObject
-    //{
-    //    public Photos photos { get; set; }
-    //    public string stat { get; set; }
-    //}
+    public class FlickerData
+    {
+        public Photos photos { get; set; }
+        public string stat { get; set; }
+    }
 }
