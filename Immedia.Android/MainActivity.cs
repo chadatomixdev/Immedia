@@ -73,7 +73,9 @@ namespace Immedia.Android
 
         #endregion
 
-
+        //TODO Move out to a service
+        //Pull back all images and not just one 
+        //Create Card View Layout
 
         async void getData()
         {
@@ -81,12 +83,12 @@ namespace Immedia.Android
 
             var content = new Dictionary<string, string>
             {
-                ["api_key"] = "3d9fd8ad0eede887e3427a7984990f4a",
+                ["api_key"] = "c0f8adc7bf4991dca92da91db98d41f0",
                 ["lat"] = "-26.0821681",
                 ["lon"] = "28.0213506",
                 ["format"] = "json",
                 ["nojsoncallback"] = "1",
-                ["api_sig"] = "06c99bc9148becfc6fc832a003812b18"
+                //["api_sig"] = "f8336fafb1f3f789ffe4d2baf7c37fb8"
             };
 
             var response = await WebRequestHelper.MakeAsyncRequest(url, content);
@@ -104,15 +106,16 @@ namespace Immedia.Android
                     string photoUrl = "http://farm{0}.staticFlickr.com/{1}/{2}_{3}_n.jpg";
 
                     string baseFlickUrl = string.Format(photoUrl, data.farm, data.server, data.id, data.secret);
-                
-                
+
                     //flickerImage will be image for now to be replaced later with list of images
-                
+                    var image = FindViewById<ImageView>(Resource.Id.imageView);
+
+                    using (var bm = await Helpers.BitmapHelper.GetImageFromUrl(baseFlickUrl))
+                        image.SetImageBitmap(bm);
+                    break;
                 }
             }
         }
-
-
     }
 }
 
