@@ -6,16 +6,24 @@ using Newtonsoft.Json;
 using Immedia.Core.Models;
 using Android.Views;
 using AlertDialog = Android.Support.V7.App.AlertDialog;
-using Android.Widget;
+using Toolbar = Android.Widget.Toolbar;
+using Android.Support.V7.Widget;
+using Immedia.Android.Adapters;
 
 namespace Immedia.Android
 {
     [Activity(Label = "Immedia", Icon = "@mipmap/iclauncher")]
     public class MainActivity : Activity
     {
+        List<FlickrPhoto> _photos = new List<FlickrPhoto>();
+
+        RecyclerView _recyclerView;
+        public RecyclerView.LayoutManager layoutManager;
+        public PhotoAdapter Adapter { get; set; }
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            base.OnCreate(savedInstanceState);
+             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.Main);
 
@@ -24,7 +32,14 @@ namespace Immedia.Android
 
             ActionBar.Title = "Immedia";
 
-            getData();
+            _recyclerView = FindViewById<RecyclerView>(Resource.Id.recyclerView);
+
+             GetData();
+
+            layoutManager = new LinearLayoutManager(this);
+            _recyclerView.SetLayoutManager(layoutManager);
+            Adapter = new PhotoAdapter(_photos);
+            _recyclerView.SetAdapter(Adapter);
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -74,11 +89,16 @@ namespace Immedia.Android
         #endregion
 
         //TODO Move out to a service
-        //Pull back all images and not just one 
         //Create Card View Layout
 
-        async void getData()
+        async void GetData()
         {
+            var progress = new ProgressDialog(this);
+            progress.SetTitle("Loading");
+            progress.SetCanceledOnTouchOutside(false);
+            
+            progress.Show();
+
             var url = WebRequestHelper.BaseUrl + "?method=flickr.photos.search";
 
             var content = new Dictionary<string, string>
@@ -88,7 +108,6 @@ namespace Immedia.Android
                 ["lon"] = "28.0213506",
                 ["format"] = "json",
                 ["nojsoncallback"] = "1",
-                //["api_sig"] = "f8336fafb1f3f789ffe4d2baf7c37fb8"
             };
 
             var response = await WebRequestHelper.MakeAsyncRequest(url, content);
@@ -98,22 +117,38 @@ namespace Immedia.Android
 
             if(apidata.stat == "ok")
             {
-                foreach (Photo data in apidata.photos.photo)
+                for (int i = 1; i < 10; i++)
                 {
-                    //To retrieve photo use this format: 
-                    //http://farm{farmid}.staticFlickr.com/{server-id}/{id}_{secret}{size}.jpg
+                    i++;
+
+                    var photo = apidata.photos.photo[i];
+
+                    long id = long.Parse(photo.id);
 
                     string photoUrl = "http://farm{0}.staticFlickr.com/{1}/{2}_{3}_n.jpg";
+                    string baseFlickUrl = string.Format(photoUrl, photo.farm, photo.server, photo.id, photo.secret);
 
-                    string baseFlickUrl = string.Format(photoUrl, data.farm, data.server, data.id, data.secret);
+                    var bitmap = await Helpers.BitmapHelper.GetImageFromUrl(baseFlickUrl);
 
-                    //flickerImage will be image for now to be replaced later with list of images
-                    var image = FindViewById<ImageView>(Resource.Id.imageView);
+                    var flickrPhoto = new FlickrPhoto
+                    {
+                        ID = id,
+                        ImageURL = baseFlickUrl,
+                        Title = photo.title,
+                        Image = bitmap
+                    };
 
-                    using (var bm = await Helpers.BitmapHelper.GetImageFromUrl(baseFlickUrl))
-                        image.SetImageBitmap(bm);
-                    break;
+                    _photos.Add(flickrPhoto);
                 }
+
+
+                //Foreach replaced by for loop for now until Image download is moved to a service.
+                //foreach (Photo data in apidata.photos.photo)
+                //{
+                //}
+
+                Adapter.NotifyDataSetChanged();
+                progress.Hide();
             }
         }
     }
