@@ -9,23 +9,52 @@ using AlertDialog = Android.Support.V7.App.AlertDialog;
 using Toolbar = Android.Widget.Toolbar;
 using Android.Support.V7.Widget;
 using Immedia.Android.Adapters;
+using Android.Locations;
+using Android.Content.PM;
+using Android.Runtime;
+using Plugin.Permissions;
+using System.Threading.Tasks;
 
 namespace Immedia.Android
 {
     [Activity(Label = "Immedia", Icon = "@mipmap/iclauncher")]
     public class MainActivity : Activity
     {
+        #region Properties
+
+        Location _currentLocation;
+        LocationManager _locationManager;
+
         List<FlickrPhoto> _photos = new List<FlickrPhoto>();
+
+        ProgressDialog _progress { get; set; }
 
         RecyclerView _recyclerView;
         public RecyclerView.LayoutManager layoutManager;
         public PhotoAdapter Adapter { get; set; }
+        protected bool Loaded { get; private set; }
+
+        string CurrentLat { get; set; }
+        string CurrentLong { get; set; }
+
+        #endregion
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
-             base.OnCreate(savedInstanceState);
-
+            base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Main);
+
+            _progress = new ProgressDialog(this);
+
+            _progress.SetTitle("Loading");
+            _progress.SetCanceledOnTouchOutside(false);
+
+            if (!Loaded)
+            {
+                LoadAsync().ContinueWith((task) =>
+                {
+                });
+            }
 
             var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             SetActionBar(toolbar);
@@ -34,12 +63,34 @@ namespace Immedia.Android
 
             _recyclerView = FindViewById<RecyclerView>(Resource.Id.recyclerView);
 
-             GetData();
-
             layoutManager = new LinearLayoutManager(this);
             _recyclerView.SetLayoutManager(layoutManager);
             Adapter = new PhotoAdapter(_photos);
             _recyclerView.SetAdapter(Adapter);
+        }
+
+        async Task LoadAsync()
+        {
+            _progress.Show();
+
+            var position = await GPSHelper.GetPosition();
+            if (position != null)
+            {
+                CurrentLat = position.Latitude.ToString();
+                CurrentLong = position.Longitude.ToString();
+            }
+
+            //Dirty fix for now TODO Replace the string manipulation with proper regional detection
+            CurrentLat = CurrentLat.Replace(",", ".");
+            CurrentLong = CurrentLong.Replace(",", ".");
+
+            GetData();
+        }
+
+
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
+        {
+            PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -88,24 +139,17 @@ namespace Immedia.Android
 
         #endregion
 
-        //TODO Move out to a service
-        //Create Card View Layout
 
+        //TODO Move out to a service
         async void GetData()
         {
-            var progress = new ProgressDialog(this);
-            progress.SetTitle("Loading");
-            progress.SetCanceledOnTouchOutside(false);
-            
-            progress.Show();
-
             var url = WebRequestHelper.BaseUrl + "?method=flickr.photos.search";
 
             var content = new Dictionary<string, string>
             {
-                ["api_key"] = "c0f8adc7bf4991dca92da91db98d41f0",
-                ["lat"] = "-26.0821681",
-                ["lon"] = "28.0213506",
+                ["api_key"] = "1ec450bec545d2e66304e349b78ce1c9",
+                ["lat"] = CurrentLat,
+                ["lon"] = CurrentLong,
                 ["format"] = "json",
                 ["nojsoncallback"] = "1",
             };
@@ -141,14 +185,9 @@ namespace Immedia.Android
                     _photos.Add(flickrPhoto);
                 }
 
-
-                //Foreach replaced by for loop for now until Image download is moved to a service.
-                //foreach (Photo data in apidata.photos.photo)
-                //{
-                //}
-
                 Adapter.NotifyDataSetChanged();
-                progress.Hide();
+
+                _progress.Hide();
             }
         }
     }
